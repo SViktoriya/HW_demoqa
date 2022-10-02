@@ -1,21 +1,21 @@
 package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.demoqa.pages.components.CalendarComponents;
-import com.demoqa.pages.components.ResultTableComponents;
-import com.demoqa.pages.components.StateAndCityComponents;
-import com.demoqa.pages.components.SubjectsFormComponents;
+import com.demoqa.pages.components.CalendarComponent;
+import com.demoqa.pages.components.ResultTableComponent;
+import com.demoqa.pages.components.StateAndCityComponent;
+import com.demoqa.pages.components.SubjectsFormComponent;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class WebTestPages {
+public class WebTestPage {
 
     //Добавлены компоненты
-    private CalendarComponents calendarComponents = new CalendarComponents();
-    private SubjectsFormComponents subjectsFormComponents = new SubjectsFormComponents();
-    private StateAndCityComponents stateAndCityComponents = new StateAndCityComponents();
-    private ResultTableComponents resultTableComponents = new ResultTableComponents();
+    private CalendarComponent calendarComponent = new CalendarComponent();
+    private SubjectsFormComponent subjectsFormComponent = new SubjectsFormComponent();
+    private StateAndCityComponent stateAndCityComponent = new StateAndCityComponent();
+    private ResultTableComponent resultTableComponent = new ResultTableComponent();
 
     //Вынесла все ID в переменные
     private SelenideElement
@@ -32,95 +32,95 @@ public class WebTestPages {
             cityInput = $("#city"),
             submitInput = $("#submit");
 
-    public WebTestPages openPage() {
+    public WebTestPage openPage() {
         open("/automation-practice-form");
 
         return this;
     }
 
-    public WebTestPages setFirstName(String value) {
+    public WebTestPage setFirstName(String value) {
         firstNameInput.setValue(value);
 
         return this;
     }
 
-    public WebTestPages setlastName(String value) {
+    public WebTestPage setlastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
 
-    public WebTestPages setUserEmail(String value) {
+    public WebTestPage setUserEmail(String value) {
         emailInput.setValue(value);
 
         return this;
     }
 
-    public WebTestPages setGenterWrapper(String value) {
+    public WebTestPage setGenterWrapper(String value) {
         genderWrapperInput.$(byText(value)).click();
 
         return this;
     }
-    public WebTestPages setUserNumber(String value) {
+    public WebTestPage setUserNumber(String value) {
         userNumberInput.setValue(value);
 
         return this;
     }
 
-    public WebTestPages setBirthDate(String day, String month, String year) {
+    public WebTestPage setBirthDate(String day, String month, String year) {
         dateOfBirthInput.click();
-        calendarComponents.setDate(day, month, year);
+        calendarComponent.setDate(day, month, year);
 
         return this;
     }
 
-    public WebTestPages setSubjects(String value) {
-        subjectsFormComponents.setSubjects(value);
+    public WebTestPage setSubjects(String value) {
+        subjectsFormComponent.setSubjects(value);
 
         return this;
     }
 
-    public WebTestPages setHobbies(String value) {
+    public WebTestPage setHobbies(String value) {
         hobbiesInput.$(byText(value)).click();
 
         return this;
     }
 
-    public WebTestPages setFile(String value) {
+    public WebTestPage setFile(String value) {
         fileInput.uploadFromClasspath(value);
 
         return this;
     }
 
-    public WebTestPages setAddress(String value) {
+    public WebTestPage setAddress(String value) {
         addressInput.setValue(value);
 
         return this;
     }
 
-    public WebTestPages setStateCity(String state, String city) {
+    public WebTestPage setStateCity(String state, String city) {
         stateInput.click();
-        stateAndCityComponents.setState(state);
+        stateAndCityComponent.setState(state);
         cityInput.click();
-        stateAndCityComponents.setCity(city);
+        stateAndCityComponent.setCity(city);
 
         return this;
     }
 
-    public WebTestPages clickSubmit () {
+    public WebTestPage clickSubmit () {
         submitInput.click();
 
         return this;
     }
 
-    public WebTestPages checkResultsTable () {
-        resultTableComponents.checkVisible();
+    public WebTestPage checkResultsTable () {
+        resultTableComponent.checkVisible();
 
         return this;
     }
 
-    public WebTestPages checkResult(String key, String value) {
-        resultTableComponents.checkResult(key, value);
+    public WebTestPage checkResult(String key, String value) {
+        resultTableComponent.checkResult(key, value);
 
         return this;
     }

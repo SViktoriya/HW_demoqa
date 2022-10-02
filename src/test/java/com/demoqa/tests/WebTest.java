@@ -1,17 +1,15 @@
 package com.demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.demoqa.pages.WebTestPages;
+import com.demoqa.pages.WebTestPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class WebTest {
-    WebTestPages webTestPages = new WebTestPages();
+    WebTestPage webTestPage = new WebTestPage();
 
     @BeforeAll
     static void setUp() {
@@ -23,7 +21,7 @@ public class WebTest {
 
     @Test
     void testRegistrationForm () {
-        webTestPages.openPage()
+        webTestPage.openPage()
                     .setFirstName("Testov")
                     .setlastName("Test")
                     .setUserEmail("Test@com.ru")
