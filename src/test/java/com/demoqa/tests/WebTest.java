@@ -5,9 +5,6 @@ import com.demoqa.pages.WebTestPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-
 public class WebTest {
     WebTestPage webTestPage = new WebTestPage();
 
