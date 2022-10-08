@@ -5,6 +5,7 @@ import com.demoqa.pages.components.CalendarComponent;
 import com.demoqa.pages.components.ResultTableComponent;
 import com.demoqa.pages.components.StateAndCityComponent;
 import com.demoqa.pages.components.SubjectsFormComponent;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -61,6 +62,7 @@ public class WebTestPage {
 
         return this;
     }
+
     public WebTestPage setUserNumber(String value) {
         userNumberInput.setValue(value);
 
@@ -107,13 +109,13 @@ public class WebTestPage {
         return this;
     }
 
-    public WebTestPage clickSubmit () {
+    public WebTestPage clickSubmit() {
         submitInput.click();
 
         return this;
     }
 
-    public WebTestPage checkResultsTable () {
+    public WebTestPage checkResultsTable() {
         resultTableComponent.checkVisible();
 
         return this;

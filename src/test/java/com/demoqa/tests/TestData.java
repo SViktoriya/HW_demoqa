@@ -22,5 +22,5 @@ public class TestData {
     public static String fileName = "1.png";
     public static String address = faker.address().fullAddress();
     public static String state = "NCR";
-    public static String city = "Delhi" ;
+    public static String city = "Delhi";
 }

@@ -19,29 +19,29 @@ public class WebTestWithTestData {
     }
 
     @Test
-    void testRegistrationForm () {
+    void testRegistrationForm() {
         webTestPage.openPage()
-                    .setFirstName(firstName)
-                    .setlastName(lastName)
-                    .setUserEmail(userEmail)
-                    .setGenterWrapper(genterWrapper)
-                    .setUserNumber(userNumber)
-                    .setBirthDate(birthDay, birthMonth, birthYear)
-                    .setSubjects(subjects)
-                    .setHobbies(hobbies)
-                    .setFile(filePath)
-                    .setAddress(address)
-                    .setStateCity(state,city)
-                    .clickSubmit()
-                    .checkResultsTable()
-                    .checkResult("Student Name", firstName + " " + lastName)
-                    .checkResult("Student Email", userEmail)
-                    .checkResult("Gender", genterWrapper)
-                    .checkResult("Mobile", userNumber)
-                    .checkResult("Date of Birth", birthDay + " " + birthMonth + "," + birthYear)
-                    .checkResult("Subjects", subjects)
-                    .checkResult("Picture", fileName)
-                    .checkResult("Address", address)
-                    .checkResult("State and City", state + " " + city);
+                .setFirstName(firstName)
+                .setlastName(lastName)
+                .setUserEmail(userEmail)
+                .setGenterWrapper(genterWrapper)
+                .setUserNumber(userNumber)
+                .setBirthDate(birthDay, birthMonth, birthYear)
+                .setSubjects(subjects)
+                .setHobbies(hobbies)
+                .setFile(filePath)
+                .setAddress(address)
+                .setStateCity(state, city)
+                .clickSubmit()
+                .checkResultsTable()
+                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Student Email", userEmail)
+                .checkResult("Gender", genterWrapper)
+                .checkResult("Mobile", userNumber)
+                .checkResult("Date of Birth", birthDay + " " + birthMonth + "," + birthYear)
+                .checkResult("Subjects", subjects)
+                .checkResult("Picture", fileName)
+                .checkResult("Address", address)
+                .checkResult("State and City", state + " " + city);
     }
 }
