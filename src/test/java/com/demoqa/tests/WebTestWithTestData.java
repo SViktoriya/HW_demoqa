@@ -19,12 +19,6 @@ public class WebTestWithTestData {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-        Configuration.browser = "Chrome";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability("browserName", "chrome");
 //        capabilities.setCapability("browserVersion", "100.0");
