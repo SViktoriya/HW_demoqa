@@ -14,6 +14,7 @@ public class WebTest {
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
         Configuration.browser = "Chrome";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     @Test
